@@ -31,7 +31,7 @@ const Content = ({SelectedTimer}) => {
 	  <textarea id="usercontent" onKeyDown={(e)=>{
 		if (e.key==="Backspace"){
 			setTranslate(prevtrans =>{
-                return prevtrans<=0? 0 : prevtrans-28
+                return prevtrans<=0? 0 : prevtrans-30
             });
 		}
 		else if(e.key==="Space"){
