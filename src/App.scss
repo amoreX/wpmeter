@@ -42,15 +42,55 @@ body{
 		cursor:pointer;
 	}
 	#content{
+		position:relative;
 		margin-left: auto;
         margin-right: auto;
         margin-top:4%;
         display:flex;
-        gap:15px;
-        color:$font-color;
+        gap:0px 15px;
+        color:rgba(128, 128, 128, 0.723);
         width:80%;
         font-family:$font;
 		font-size: 27px;
+		flex-wrap: wrap;
+		// background-color: white;
+		#usercontent{
+			position:absolute;
+			gap:15px;
+			width:100%;
+			background-color:rgba(0, 0, 0, 0);
+			color:#ffc800;	
+			outline:none;
+			font-family:$font;
+			font-size: 27px;
+			border:none;
+			resize:none;
+			height:100%;
+			transform: translate(-1px,-1px);
+			caret-color: #e2b51400;
+			
+
+		}
+		#customcursor{
+			position:absolute;
+			background-color: #e2b514;
+			width:3px;
+			height:29px;
+			transition:0.191s ease;
+			animation: blink 1.5s infinite;
+		}
 	}
 	
+}
+
+@keyframes blink{
+	0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
 }

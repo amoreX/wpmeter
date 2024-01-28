@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-const timerValues = ['15s', '30s', '45s', '60s'];
 
 export default function Time({SelectedTimer,onTimerChange}) {
   
 	return (
 	  <div id="header">
-		{['15s', '30s', '45s', '60s'].map((timerValue) => (
+		{['5s', '10s', '15s', '30s'].map((timerValue) => (
 		  <div
 			key={timerValue}
 			id="headerelement"

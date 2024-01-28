@@ -39,13 +39,50 @@ body #timer {
   cursor: pointer;
 }
 body #content {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4%;
   display: flex;
-  gap: 15px;
-  color: rgba(226, 181, 20, 0.3843137255);
+  gap: 0px 15px;
+  color: rgba(128, 128, 128, 0.723);
   width: 80%;
   font-family: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
   font-size: 27px;
+  flex-wrap: wrap;
+}
+body #content #usercontent {
+  position: absolute;
+  gap: 15px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffc800;
+  outline: none;
+  font-family: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+  font-size: 27px;
+  border: none;
+  resize: none;
+  height: 100%;
+  transform: translate(-1px, -1px);
+  caret-color: rgba(226, 181, 20, 0);
+}
+body #content #customcursor {
+  position: absolute;
+  background-color: #e2b514;
+  width: 3px;
+  height: 29px;
+  transition: 0.191s ease;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 function App() {
-  const [selectedTimer, setSelectedTimer] = useState('15s');
+  const [selectedTimer, setSelectedTimer] = useState('10s');
 
   const handleTimerChange = (timerValue) => {
     setSelectedTimer(timerValue);
@@ -17,7 +17,7 @@ function App() {
     <>
       <Header SelectedTimer={selectedTimer} onTimerChange={handleTimerChange} />
       <Timer SelectedTimer={selectedTimer} />
-      <Content />
+      <Content SelectedTimer={parseInt(selectedTimer, 10)}/>
     </>
   )
 }
