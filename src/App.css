@@ -63,8 +63,8 @@ body #content #usercontent {
   border: none;
   resize: none;
   height: 100%;
-  transform: translate(-1px, -1px);
   caret-color: rgba(226, 181, 20, 0);
+  padding: 0px;
 }
 body #content #customcursor {
   position: absolute;
