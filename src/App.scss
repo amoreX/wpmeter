@@ -1,0 +1,45 @@
+@mixin bg($bgcolor){
+	background: $bgcolor;
+}
+$font:"Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+$font-colorhighlighted:#e2b514;
+$font-color:#e2b51462;
+body{
+	margin:0;
+	@include bg(rgb(39, 38, 33));
+
+	#header{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:4%;
+		padding:5px;
+		padding-inline: 10px;
+		display:flex;
+		gap:15px;
+		color:$font-color;
+		width:fit-content;
+		border: 0.5px solid grey;
+		font-family:$font;
+		border-radius: 16px;
+		backdrop-filter: blur(24px);
+		cursor:pointer;
+	}
+	#timer{
+		margin-left: auto;
+		margin-right: 9%;
+		margin-top:2%;
+		padding:5px;
+		padding-inline: 10px;
+		display:flex;
+		gap:15px;
+		font-size:23px;
+		color:$font-colorhighlighted;
+		width:fit-content;
+		// border: 0.5px solid grey;
+		font-family:$font;
+		border-radius: 7px;
+		backdrop-filter: blur(24px);
+		cursor:pointer;
+	}
+	
+}

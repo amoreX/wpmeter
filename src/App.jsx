@@ -1,11 +1,19 @@
 import { useState } from 'react'
+import Header from './Components/Timeheader'
+import Timer from './Components/Timer'
 import './App.css'
 
 function App() {
+  const [selectedTimer, setSelectedTimer] = useState('15s');
+
+  const handleTimerChange = (timerValue) => {
+    setSelectedTimer(timerValue);
+  };
 
   return (
     <>
-      Achha!!
+      <Header SelectedTimer={selectedTimer} onTimerChange={handleTimerChange} />
+      <Timer SelectedTimer={selectedTimer} />
     </>
   )
 }
