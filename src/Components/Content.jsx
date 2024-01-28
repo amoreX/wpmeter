@@ -5,7 +5,7 @@ const Content = ({SelectedTimer}) => {
   const [content, setContent] = useState([]);
   let [translate,setTranslate] = useState(0);
   let [translate2,setTranslate2] = useState(0);
-  
+  let [userdata,setUserdata] = useState("");
   useEffect(() => {
 	setContent(generate(SelectedTimer*5));
   }, [SelectedTimer]);  
@@ -13,6 +13,8 @@ const Content = ({SelectedTimer}) => {
 	document.getElementById("customcursor").style.transform=`translate(${translate}px,${translate2}px)`
   },[translate,translate2]);
   const masti= (e) =>{
+	setUserdata(e.target.value);
+	console.log(e.target.value);
 	setTranslate(prevtrans =>{
 		return prevtrans+15;
 	});
