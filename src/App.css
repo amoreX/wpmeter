@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: rgb(39, 38, 33);
+  background: rgba(26, 27, 29, 0.9411764706);
 }
 body #header {
   margin-left: auto;
@@ -37,4 +37,15 @@ body #timer {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
   cursor: pointer;
+}
+body #content {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  display: flex;
+  gap: 15px;
+  color: rgba(226, 181, 20, 0.3843137255);
+  width: 80%;
+  font-family: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+  font-size: 27px;
 }/*# sourceMappingURL=App.css.map */

@@ -6,7 +6,7 @@ $font-colorhighlighted:#e2b514;
 $font-color:#e2b51462;
 body{
 	margin:0;
-	@include bg(rgb(39, 38, 33));
+	@include bg(#1a1b1df0);
 
 	#header{
 		margin-left: auto;
@@ -40,6 +40,17 @@ body{
 		border-radius: 7px;
 		backdrop-filter: blur(24px);
 		cursor:pointer;
+	}
+	#content{
+		margin-left: auto;
+        margin-right: auto;
+        margin-top:4%;
+        display:flex;
+        gap:15px;
+        color:$font-color;
+        width:80%;
+        font-family:$font;
+		font-size: 27px;
 	}
 	
 }
