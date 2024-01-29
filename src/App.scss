@@ -84,6 +84,30 @@ body{
 	}
 	
 }
+#result{
+	position: absolute;
+	top:0%;
+	left:0%;
+	width:100vw;
+	backdrop-filter:blur(16px) ;
+	color:White;
+	font-family:$font;
+	font-size: 48px;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	#rescontent{
+		display:flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		#retake{
+			font-size: 27px;
+			color:rgba(255, 255, 255, 0.46);
+		}
+	}
+}
 
 @keyframes blink{
 	0%{

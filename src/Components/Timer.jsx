@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Timer({ SelectedTimer,typing }) {
+export default function Timer({ SelectedTimer,typing, whentimeover }) {
   let initialTimerValue = parseInt(SelectedTimer, 10);
   const [timer, setTimer] = useState(initialTimerValue);
 
@@ -15,6 +15,9 @@ export default function Timer({ SelectedTimer,typing }) {
     if (typing && timer > 0) {
       startTimer();
     }
+	if(timer==0){
+		whentimeover();
+	}
 
     return () => {
       clearInterval(intervalId);

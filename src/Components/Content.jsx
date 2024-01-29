@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { generate, count } from "random-words";
 
-const Content = ({SelectedTimer,wheninput}) => {
+const Content = ({SelectedTimer,wheninput,result,data}) => {
   const [content, setContent] = useState([]);
   let [translate,setTranslate] = useState(0);
   let [translate2,setTranslate2] = useState(0);
-  let [userdata,setUserdata] = useState("");
+  
   useEffect(() => {
 	setContent(generate(SelectedTimer*5));
-  }, [SelectedTimer]);  
+	
+  }, [SelectedTimer]);
+  useEffect(()=>{
+	data(content);
+  },[content])  
   useEffect(() => {
 	document.getElementById("customcursor").style.transform=`translate(${translate}px,${translate2}px)`
   },[translate,translate2]);
   const masti= (e) =>{
-	setUserdata(e.target.value);
-	console.log(e.target.value);
+	result(e.target.value);
 	setTranslate(prevtrans =>{
 		return prevtrans+15;
 	});
