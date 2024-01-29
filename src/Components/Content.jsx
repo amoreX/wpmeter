@@ -3,6 +3,7 @@ import { generate, count } from "random-words";
 
 const Content = ({SelectedTimer,wheninput,result,data}) => {
   const [content, setContent] = useState([]);
+  const [isfocus,setFocus] = useState(true);
   let [translate,setTranslate] = useState(0);
   let [translate2,setTranslate2] = useState(0);
   
@@ -33,7 +34,7 @@ const Content = ({SelectedTimer,wheninput,result,data}) => {
 		)
 	  })}
 
-	  <textarea id="usercontent" onInput={() => wheninput()} onKeyDown={(e)=>{
+	  <textarea autoFocus={isfocus} onFocus={()=>{setFocus(true)}} onBlur={()=>{setFocus(false)}} id="usercontent" onInput={() => wheninput()} onKeyDown={(e)=>{
 		if (e.key==="Backspace"){
 			setTranslate(prevtrans =>{
                 return prevtrans<=0? 0 : prevtrans-30
@@ -51,7 +52,7 @@ const Content = ({SelectedTimer,wheninput,result,data}) => {
 			setTranslate(-15);
 		}
 	  }} onChange={(e)=>{masti(e)}}></textarea>
-	  <div id="customcursor"></div>
+	  <div id="customcursor" style={{visibility:isfocus?"visible":"hidden"}}></div>
     </div>
   );
 };
