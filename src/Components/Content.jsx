@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { generate, count } from "random-words";
 
-const Content = ({SelectedTimer}) => {
+const Content = ({SelectedTimer,wheninput}) => {
   const [content, setContent] = useState([]);
   let [translate,setTranslate] = useState(0);
   let [translate2,setTranslate2] = useState(0);
@@ -30,7 +30,7 @@ const Content = ({SelectedTimer}) => {
 		)
 	  })}
 
-	  <textarea id="usercontent" onKeyDown={(e)=>{
+	  <textarea id="usercontent" onInput={() => wheninput()} onKeyDown={(e)=>{
 		if (e.key==="Backspace"){
 			setTranslate(prevtrans =>{
                 return prevtrans<=0? 0 : prevtrans-30

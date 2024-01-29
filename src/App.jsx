@@ -8,16 +8,20 @@ import axios from 'axios'
 
 function App() {
   const [selectedTimer, setSelectedTimer] = useState('10s');
+  const [isTyping, setIsTyping] = useState(false);
 
   const handleTimerChange = (timerValue) => {
     setSelectedTimer(timerValue);
+  };
+  const handleTypingStart = () => {
+    setIsTyping(true);
   };
 
   return (
     <>
       <Header SelectedTimer={selectedTimer} onTimerChange={handleTimerChange} />
-      <Timer SelectedTimer={selectedTimer} />
-      <Content SelectedTimer={parseInt(selectedTimer, 10)}/>
+      <Timer SelectedTimer={selectedTimer} typing={isTyping} />
+      <Content SelectedTimer={parseInt(selectedTimer, 10)} wheninput={handleTypingStart}/>
     </>
   )
 }
