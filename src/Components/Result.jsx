@@ -6,13 +6,15 @@ export default function result({timer,user,original,SelectedTimer}){
 		let j=0;
 		for (let i=0; i<userdata.length;i++){
 			if (userdata[i]==originaldata[i]){
-				j++;
+				j=j+userdata[i].length;
 			}
 			else if (i>=originaldata.length){
 				break;
 			}
 		}
-		return ((j*60)/time);
+		// return ((j*60)/time);
+		let k=Math.floor(((j/5)/time)*60);
+		return k;
 	}
 	return( 
 		<div style={{visibility:timer==true?"visible":"hidden"}}  id="result">
