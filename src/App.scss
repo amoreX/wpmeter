@@ -3,7 +3,6 @@
 }
 $font:"Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
 $font-colorhighlighted:#e2b514;
-$font-color:#e2b51462;
 body{
 	margin:0;
 	@include bg(#1a1b1df0);
@@ -16,13 +15,16 @@ body{
 		padding-inline: 10px;
 		display:flex;
 		gap:15px;
-		color:$font-color;
 		width:fit-content;
 		border: 0.5px solid grey;
 		font-family:$font;
 		border-radius: 16px;
 		backdrop-filter: blur(24px);
 		cursor:pointer;
+		#headerelement{
+			transition:0.38s ease-in-out;
+
+		}
 	}
 	#timer{
 		margin-left: auto;
@@ -35,11 +37,11 @@ body{
 		font-size:23px;
 		color:$font-colorhighlighted;
 		width:fit-content;
-		// border: 0.5px solid grey;
 		font-family:$font;
 		border-radius: 7px;
 		backdrop-filter: blur(24px);
 		cursor:pointer;
+		transition:0.38s ease-in-out;
 	}
 	#content{
 		position:relative;
@@ -108,6 +110,20 @@ body{
 		}
 	}
 }
+#themes{
+	position:absolute;
+	bottom:4%;
+	right:2%;
+	padding:5px;
+	border-radius: 50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e2b514;
+	transition:0.38s ease-in-out;
+	cursor:pointer;
+}
+
 
 @keyframes blink{
 	0%{

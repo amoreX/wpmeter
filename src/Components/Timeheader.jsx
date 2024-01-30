@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Time({SelectedTimer,onTimerChange}) {
+export default function Time({SelectedTimer,onTimerChange,colour,colorfocus}) {
   
 	return (
 	  <div id="header">
@@ -9,7 +9,7 @@ export default function Time({SelectedTimer,onTimerChange}) {
 			key={timerValue}
 			id="headerelement"
 			onClick={() => onTimerChange(timerValue)}
-			style={{ color: SelectedTimer === timerValue ? '#e2b514' : '#e2b51462' }}
+			style={{ color: SelectedTimer === timerValue ? colorfocus : 'grey' }}
 		  >
 			{timerValue}
 		  </div>

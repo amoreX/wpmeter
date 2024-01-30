@@ -10,7 +10,6 @@ body #header {
   padding-inline: 10px;
   display: flex;
   gap: 15px;
-  color: rgba(226, 181, 20, 0.3843137255);
   width: -moz-fit-content;
   width: fit-content;
   border: 0.5px solid grey;
@@ -19,6 +18,9 @@ body #header {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
   cursor: pointer;
+}
+body #header #headerelement {
+  transition: 0.38s ease-in-out;
 }
 body #timer {
   margin-left: auto;
@@ -37,6 +39,7 @@ body #timer {
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
   cursor: pointer;
+  transition: 0.38s ease-in-out;
 }
 body #content {
   position: relative;
@@ -99,6 +102,20 @@ body #content #customcursor {
 #result #rescontent #retake {
   font-size: 27px;
   color: rgba(255, 255, 255, 0.46);
+}
+
+#themes {
+  position: absolute;
+  bottom: 4%;
+  right: 2%;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2b514;
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
 }
 
 @keyframes blink {
