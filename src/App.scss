@@ -1,11 +1,19 @@
-@mixin bg($bgcolor){
-	background: $bgcolor;
-}
+
 $font:"Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
 $font-colorhighlighted:#e2b514;
 body{
+	z-index: -1;
 	margin:0;
-	@include bg(#1a1b1df0);
+}
+#container{
+	z-index: 1;
+	position:absolute;
+	height:100vh;
+	left:0%;
+	top:0%;
+	width:100vw;
+	margin:0;
+	transition:0.38s ease-in-out;
 
 	#header{
 		margin-left: auto;
@@ -71,6 +79,7 @@ body{
 			// transform: translate(-1px,-1px);
 			caret-color: #e2b51400;
 			padding:0px;
+			transition:0.38s ease-in-out;
 
 			
 

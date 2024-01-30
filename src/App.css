@@ -1,8 +1,19 @@
 body {
+  z-index: -1;
   margin: 0;
-  background: rgba(26, 27, 29, 0.9411764706);
 }
-body #header {
+
+#container {
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  left: 0%;
+  top: 0%;
+  width: 100vw;
+  margin: 0;
+  transition: 0.38s ease-in-out;
+}
+#container #header {
   margin-left: auto;
   margin-right: auto;
   margin-top: 4%;
@@ -19,10 +30,10 @@ body #header {
           backdrop-filter: blur(24px);
   cursor: pointer;
 }
-body #header #headerelement {
+#container #header #headerelement {
   transition: 0.38s ease-in-out;
 }
-body #timer {
+#container #timer {
   margin-left: auto;
   margin-right: 9%;
   margin-top: 2%;
@@ -41,7 +52,7 @@ body #timer {
   cursor: pointer;
   transition: 0.38s ease-in-out;
 }
-body #content {
+#container #content {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -54,7 +65,7 @@ body #content {
   font-size: 27px;
   flex-wrap: wrap;
 }
-body #content #usercontent {
+#container #content #usercontent {
   position: absolute;
   gap: 15px;
   width: 100%;
@@ -68,8 +79,9 @@ body #content #usercontent {
   height: 100%;
   caret-color: rgba(226, 181, 20, 0);
   padding: 0px;
+  transition: 0.38s ease-in-out;
 }
-body #content #customcursor {
+#container #content #customcursor {
   position: absolute;
   background-color: #e2b514;
   width: 3px;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { generate, count } from "random-words";
 
-const Content = ({SelectedTimer,wheninput,result,data}) => {
+const Content = ({SelectedTimer,wheninput,result,data,color}) => {
   const [content, setContent] = useState([]);
   const [isfocus,setFocus] = useState(true);
   let [translate,setTranslate] = useState(0);

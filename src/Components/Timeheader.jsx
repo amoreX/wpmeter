@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Time({SelectedTimer,onTimerChange,colour,colorfocus}) {
+export default function Time({SelectedTimer,onTimerChange,colorfocus}) {
   
 	return (
 	  <div id="header">
